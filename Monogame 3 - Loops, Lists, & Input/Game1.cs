@@ -50,11 +50,16 @@ namespace Monogame_3___Loops__Lists____Input
 
             // TODO: use this.Content to load your game content here
 
-            mowerTexture = Content.Load<Texture2D>("Images/mower");
-            grassTexture = Content.Load<Texture2D>("Images/long_grass");
-            mowerSound = Content.Load<SoundEffect>("Sounds/mower_sound");
-            mowerSoundInstance = mowerSound.CreateInstance();
-            mowerSoundInstance.IsLooped = true;
+           
+
+
+
+
+
+
+
+
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -64,36 +69,7 @@ namespace Monogame_3___Loops__Lists____Input
 
             // TODO: Add your update logic here
 
-          keyboardState = Keyboard.GetState();
-
-            mowerSpeed = Vector2.Zero;
-            if (keyboardState.IsKeyDown(Keys.W))
-            {
-                mowerSpeed.Y -= 1;
-            }
-
-            if (keyboardState.IsKeyDown(Keys.S))
-            {
-                mowerSpeed.Y += 1;
-            }
-
-            if (keyboardState.IsKeyDown(Keys.A))
-            {
-                mowerSpeed.X -= 1;
-            }
-
-            if (keyboardState.IsKeyDown(Keys.D))
-            {
-                mowerSpeed.X += 1;
-            }
-
-            mowerRect.Offset(mowerSpeed);
-
-            if (mowerSpeed == Vector2.Zero)
-                mowerSoundInstance.Stop();
-            else
-                mowerSoundInstance.Play();
-
+         
                 base.Update(gameTime);
         }
 
